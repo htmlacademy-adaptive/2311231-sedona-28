@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body class="page__body">
+        <header class="main-header">
+            <a class="main-header__logo logo" href="index.html">
+                <img class="logo-image" src="/source/img/index/logo.png" width="185px" height="96px" alt="Седона.">
+            </a>
+        
+            <nav class="main-header__nav main-nav">
+                <button class="main-nav__toggle toggle" type="button">
+                    <span class="visually-hidden">Открыть меню.</span>
+                </button>
+
+                <div class="main-nav__wrapper">
+                    <ul class="main-nav__list site-list">
+
+                        <li class="site-list__item">
+                            <a href="index.html">
+                                Главная
+                            </a>
+                        </li>
+
+                        <li class="site-list__item">
+                            <a href="catalog.html">
+                                Фото и видео
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="main-nav__list user-list">
+
+                        <li class="user-list__item user-list__item--current">
+                            <a href="form.html">
+                                Форма Отзыва
+                            </a>
+                        </li>
+
+                        <li class="user-list__item">
+                            <a href="https://htmlacademy.ru">
+                                HTML ACADEMY
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-container">
+            <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
+            <img class="main-container__title-image" src="/source/img/SEDONA.png">
+
+            <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+                <h2 class="form__title title">Оставьте свой отзыв</h2>
+                <p class="form__discription discription">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+
+                <fieldset class="form__personal personal">
+
+                    <legend class="personal__title title">Представьтесь:</legend>
+
+                    <label class="personal__label discription">Имя<sup>*</sup>:
+                        <input class="personal__text-input text-input" type="text" name="first name" placeholder="Имя" value="Пётр" required>
+                    </label>
+
+                    <label class="personal__label discription">Фамилия<sup>*</sup>:
+                        <input class="personal__text-input text-input" type="text" name="last name" placeholder="Фамилия" value="Пустота" required>
+                    </label>
+
+                    <label class="personal__label discription">Отчество:
+                        <input class="personal__text-input text-input" type="text" name="father name" placeholder="Отчество" value="Викторович">
+                    </label>
+
+                </fieldset>
+
+                <fieldset class="form__contacts contacts">
+
+                    <legend class="contacts__title title">Контактная информация:</legend>
+
+                    <label class="contacts__label discription">Контактный телефон<sup>*</sup>:
+                        <input class="contacts__input text-input" type="tel" name="phone" placeholder="Введите телефон" required>
+                    </label>
+
+                    <label class="contacts__label discription">Электронная почта<sup>*</sup>:
+                        <input class="contacts__input text-input" type="email" name="e-mail" placeholder="Введите e-mail" required>
+                    </label>
+
+                </fieldset>
+
+                <fieldset class="form__rating rating">
+
+                    <legend class="rating__title title">Ваше общее впечатление:</legend>
+
+                    <label class="rating__label">
+                        <input class="rating__radio-box check-input" type="radio" name="good" checked>
+                        Скорее положительное
+                    </label>
+
+                    <label class="rating__label">
+                        <input class="rating__radio-box check-input" type="radio" name="bad">
+                        Скорее отрицательное
+                    </label>
+                    
+                    <label class="rating__label">
+                        <input class="rating__radio-box check-input" type="radio" name="normal">
+                        Затрудняюсь ответить
+                    </label>
+
+                </fieldset>
+
+                <fieldset class="form__visited visited">
+
+                    <legend class="visited__title title">Посещенные достопримечательности:</legend>
+
+                    <label class="visited__label">
+                        <input class="visited__check-box check-input" type="checkbox" name="Devils bridge" checked>
+                        Мост Дьявола
+                    </label>
+
+                    <label class="visited__label">
+                        <input class="visited__check-box check-input" type="checkbox" name="Bell mountain" checked>
+                        Гора-Колокол
+                    </label>
+                    
+                    <label class="visited__label">
+                        <input class="visited__check-box check-input" type="checkbox" name="Slide park" checked>
+                        Слайд-парк
+                    </label>
+
+                    <label class="visited__label">
+                        <input class="visited__check-box check-input" type="checkbox" name="Red rocks">
+                        Красные скалы
+                    </label>
+
+                </fieldset>
+
+                <fieldset class="form__review review">
+
+                    <legend class="review__title title">Опишите свои эмоции:</legend>
+
+                    <input class="review__text-box" type="text" name="free-form-rewiew" placeholder="Опишите подробно все свои восторги">
+
+                </fieldset>
+
+                <button class="form__button button--primary" type="submit">Отправить отзыв</button>
+                <span class="form__message">* — обязательные поля</span>
+            </form>
+
+            <footer class="main-footer">
+                <div class="main-footer__wrapper">
+
+                    <div class="main-footer__tags tags">
+                        <p class="tags__text">#visitSEDONA</p>
+                    </div>
+
+                    <div class="main-footer__social social">
+                        <ul class="social__list">
+
+                            <li class="social__item">
+                                <a class="social__link social__link--vkontakte" href="#">
+                                    <span class="visually-hidden">Вконтакте</span>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link social__link--telegram" href="#">
+                                    <span class="visually-hidden">Телеграм</span>
+                                </a>
+                            </li>
+
+                            <li class="social__item">
+                                <a class="social__link social__link--youtube" href="#">
+                                    <span class="visually-hidden">Ютуб</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="main-footer__copyright copyright">
+                        <b class="copyright__text">Разработано</b>
+                        <a class="copyright__link" href="https://htmlacademy.ru">
+                            <span class="visually-hidden">.html academy</span>
+                        </a>
+                    </div>
+
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
