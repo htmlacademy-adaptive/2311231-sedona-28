@@ -1,1 +1,50 @@
 // Начните писать стили здесь
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/ptsans.woff) format("woff"), url(../fonts/ptsans.woff2) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/ptsansbold.woff) format("woff"), url(../fonts/ptsansbold.woff2) format("woff2");
+    font-display: swap;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@import "colors.less";
+@import "page.less";
+
+@import "./header/main-header.less";
+@import "./header/main-nav.less";
+@import "./header/site-list.less";
+@import "./header/user-list.less";
+@import "./header/logo.less";
+
+@import "main-container.less";
+@import "./index/advantages.less";
+@import "./index/hotel-search.less";
+@import "social.less";
+@import "main-footer.less";
+
+@import "./catalog/catalog.less";
+@import "./catalog/card.less";
+@import "./catalog/preview.less";
+
+@import "./form/form.less";

@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Путешествие по Седоне</title>
+        <link rel="stylesheet" href="/css/style.css">
     </head>
 
     <body class="page__body">
         <header class="main-header">
             <a class="main-header__logo logo" href="index.html">
-                <img class="logo__image" src="/source/img/index/logo.png" width="185" height="96" alt="Седона.">
+                <img class="logo__image" src="/img/index/logo.png" width="185" height="96" alt="Седона.">
             </a>
             <nav class="main-header__nav main-nav">
                 <button class="main-nav__toggle toggle" type="button">
@@ -46,16 +47,19 @@
         </header>
 
         <main class="main-container">
-            <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
-            <img class="main-container__title-image" src="/source/img/SEDONA.png" alt="Добро пожаловать в великолепную Седону!">
+            <section class="welcome-message">
+                <h1 class="visually-hidden">Добро пожаловать в великолепную Седону!</h1>
+                <img class="welcome-message__title-image" src="/img/sedona-text.png" width="229" height="39" alt="Добро пожаловать в великолепную Седону!">
+            </section>            
             <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-                <h2 class="form__title">Оставьте свой отзыв</h2>
-                <p class="form__discription">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+                <div class="form__header">
+                    <h2 class="form__title">Оставьте свой отзыв</h2>
+                    <p class="form__discription">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+                </div>
                 <fieldset class="form__fieldset">
                     <legend class="form__legend">Представьтесь:</legend>
-                    <label class="form__label">Имя<sup>*</sup>:
-                        <input class="form__input form__input--text" type="text" name="first name" placeholder="Имя" value="Пётр" required>
-                    </label>
+                    <label class="form__label" id="name">Имя<sup>*</sup>:</label>
+                    <input class="form__input form__input--text" for="name" type="text" name="first name" placeholder="Имя" value="Пётр" required>
 
                     <label class="form__label">Фамилия<sup>*</sup>:
                         <input class="form__input form__input--text" type="text" name="last name" placeholder="Фамилия" value="Пустота" required>
