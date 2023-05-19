@@ -9,6 +9,7 @@
     max-width: 100%;
     object-fit: cover;
     position: relative;
+    background-position: center;
     &::after {
         content: "";
         position: absolute;
@@ -17,12 +18,13 @@
         left: 0;
         width: 320px;
         height: 57px;
+        background-position: center;
     }
 }
 
 .main-welcome__title-image {
     padding: 0;
-    margin: 90px 19px 33px;
+    margin: 90px 19px 85px;
 }
 
 .welcome-message {
@@ -44,6 +46,12 @@
 .welcome-message__title-image {
   margin-top: 52px;
   margin-bottom: 67px;
+}
+
+@media (min-resolution: 2dppx) {
+  .main-welcome {
+    background-image: url(/img/back-mobile@2x.jpg);
+  }
 }
 
 @media (min-width: @tablet-width) {
