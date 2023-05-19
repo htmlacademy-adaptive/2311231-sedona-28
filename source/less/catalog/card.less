@@ -1,5 +1,8 @@
-.card__image{
-
+.card__wrapper {
+    padding: 15px 0 0;
+    &--text {
+        margin-bottom: 11px;
+    }
 }
 
 .card__title {
@@ -24,10 +27,6 @@
 }
 
 .card__like {
-    display: flex;
-}
-
-.like__number {
     font-family: 'PT Sans';
     font-style: normal;
     font-weight: 700;
@@ -35,4 +34,65 @@
     line-height: 21px;
     color: #000000;
     margin-left: 37px;
+    position: relative;
+    &::before {
+        background-image: url(/img/catalog/like-icon.svg);
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -37px;
+        width: 23px;
+        height: 21px;
+    }
+}
+
+.card__image {
+  object-fit: contain;
+}
+
+@media (min-width: @tablet-width) {
+    .card__wrapper {
+        padding: 22px 20px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--text {
+            margin-bottom: 0;
+        }
+    }
+
+    .card__like {
+        &::before {
+            left: -30px
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+  .card {
+      position: relative;
+  }
+
+  .card__wrapper {
+      padding: 22px 20px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000000;
+      opacity: 0.3;
+      max-height: 400px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+  }
+
+  .card__title, .card__author, .card__like{
+    color: #FFFFFF;
+  }
+
+  .card__like {
+    &::before {
+        background-image: url(/img/catalog/like-icon-white.svg);
+    }
+}
 }

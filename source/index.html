@@ -2,14 +2,17 @@
 <html class="page" lang="ru">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Путешествие по Седоне</title>
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" href="/32.ico">
+        <link rel="manifest" href="manifest.webmanifest">
     </head>
 
     <body class="page__body">
         <header class="main-header">
             <a class="main-header__logo logo" href="index.html">
-                <img class="logo__image" src="/img/index/logo.png" width="185" height="96" alt="Седона.">
+                <img class="logo__image" src="/img/logo.png" width="185" height="96" alt="Седона.">
             </a>
             <nav class="main-header__nav main-nav">
                 <button class="main-nav__toggle toggle" type="button">
@@ -61,52 +64,75 @@
                     </header>
                     <ol class="advantages__list">
                         <li class="advantages__item advantages__item--primary">
-                            <h3 class="advantages__title">НАСТОЯЩИЙ ГОРОДОК</h3>
-                            <div class="advantages__divider">- №1 -</div>
-                            <p class="advantages__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
-                            <!-- <img> -->
-
+                            <div class="advantages__item__wrapper">
+                                <h3 class="advantages__title">НАСТОЯЩИЙ ГОРОДОК</h3>
+                                <div class="advantages__divider">- №1 -</div>
+                                <p class="advantages__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="/img/index/photo-city@1x-desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="/img/index/photo-city@1x-tablet.jpg">
+                                <img class="advantages__image" src="/img/index/photo-city@1x-mobile.jpg" alt="Фото города.">
+                            </picture>
                             <ul class="advantages__town-list">
                                 <li class="advantages__town-item advantages__town-item--house">
-                                    <h3 class="advantages__title">Жилье</h3>
-                                    <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                                    <div class="advantages__town-item__wrapper">
+                                        <h3 class="advantages__title">Жилье</h3>
+                                        <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                                    </div>
                                 </li>
 
-                                <li class="advantages__town-item advantages__town-item--food">
-                                    <h3 class="advantages__title">ЕДА</h3>
-                                    <p class="advantages__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                                <li class="advantages__town-item advantages__town-item--burger">
+                                    <div class="advantages__town-item__wrapper">
+                                        <h3 class="advantages__title">ЕДА</h3>
+                                        <p class="advantages__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                                    </div>
                                 </li>
 
-                                <li class="advantages__town-item advantages__town-item--gifts">
-                                    <h3 class="advantages__title">СУВЕНИРЫ</h3>
-                                    <p class="advantages__description">Не только китайского, но и местного производства!</p>
+                                <li class="advantages__town-item advantages__town-item--gift">
+                                    <div class="advantages__town-item__wrapper">
+                                        <h3 class="advantages__title">СУВЕНИРЫ</h3>
+                                        <p class="advantages__description">Не только китайского, но и местного производства!</p>
+                                    </div>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="advantages__item advantages__item--primary">
-                            <h3 class="advantages__title"> ТАМ ЕСТЬ Мост дьявола</h3>
-                            <div class="advantages__divider">- №2 -</div>
-                            <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-                            <!-- <img> -->
+                            <div class="advantages__item__wrapper">
+                                <h3 class="advantages__title"> ТАМ ЕСТЬ Мост дьявола</h3>
+                                <div class="advantages__divider">- №2 -</div>
+                                <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="/img/index/photo-bridge@1x-desktop.jpg">
+                                <source media="(min-width: 768px)" srcset="/img/index/photo-bridge@1x-tablet.jpg">
+                                <img class="advantages__image" src="/img/index/photo-bridge@1x-mobile.jpg" alt="Фото моста.">
+                            </picture>
                         </li>
 
                         <li class="advantages__item advantages__item--secondary">
-                            <h3 class="advantages__title">  НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
-                            <div class="advantages__divider">- №3 -</div>
-                            <p class="advantages__description">ВСЕ интересные места находятся очень близко</p>
+                            <div class="advantages__item__wrapper">
+                                <h3 class="advantages__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+                                <div class="advantages__divider">- №3 -</div>
+                                <p class="advantages__description">ВСЕ интересные места находятся очень близко</p>
+                            </div>
                         </li>
 
                         <li class="advantages__item advantages__item--secondary">
-                            <h3 class="advantages__title"> КРАСИВАЯ ДОРОГА</h3>
-                            <div class="advantages__divider">- №4 -</div>
-                            <p class="advantages__description"> ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                            <div class="advantages__item__wrapper">
+                                <h3 class="advantages__title">КРАСИВАЯ ДОРОГА</h3>
+                                <div class="advantages__divider">- №4 -</div>
+                                <p class="advantages__description"> ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                            </div>
                         </li>
 
                         <li class="advantages__item advantages__item--secondary">
-                            <h3 class="advantages__title"> МАЛО ТУРИСТОВ</h3>
-                            <div class="advantages__divider">- №5 -</div>
-                            <p class="advantages__description"> Большинство едет в гранд каньони толпится там</p>
+                            <div class="advantages__item__wrapper">
+                                <h3 class="advantages__title">МАЛО ТУРИСТОВ</h3>
+                                <div class="advantages__divider">- №5 -</div>
+                                <p class="advantages__description"> Большинство едет в гранд каньони толпится там</p>
+                            </div>
                         </li>
                     </ol>
                 </div>
@@ -114,14 +140,18 @@
             <section class="hotel-search">
                 <div class="hotel-search__wrapper">
                     <h2 class="hotel-search__title">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
-                    <p class="hotel-search__description">Укажите предполагаемые датыпоездки, и мы покажем вам лучшиепредложения гостиниц в седоне</p>
+                    <p class="hotel-search__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
                     <a class="hotel-search__link button button--primary" href="#">
                             Найти гостинницу
                     </a>
                 </div>
             </section>
             <section class="main-map">
-                <img class="main-map__image" src="/img/index/map-mobile.jpg.png" width="320" height="350" alt="Карта седоны.">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="/img/index/map-desktop.jpg">
+                    <source media="(min-width: 768px)" srcset="/img/index/map-tablet.jpg">
+                    <img class="main-map__image" src="/img/index/map-mobile.jpg" alt="Карта седоны.">
+                </picture>
             </section>
         </main>
 

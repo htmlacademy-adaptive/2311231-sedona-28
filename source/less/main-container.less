@@ -3,18 +3,87 @@
 }
 .main-welcome {
     background-image: url(/img/back-mobile.jpg);
+    background-repeat: no-repeat;
+    background-color: #EEEEEE;
+    color:#000000;
     max-width: 100%;
     object-fit: cover;
-    height: 389px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(/img/intro-triangle-mobile.svg);
+        bottom: -1px;
+        left: 0;
+        width: 320px;
+        height: 57px;
+    }
 }
 
 .main-welcome__title-image {
     padding: 0;
-    margin: 90px 19px 85px;
+    margin: 90px 19px 33px;
 }
 
 .welcome-message {
     background-image: url(/img/back-mobile.jpg);
-    max-width: 100%;
-    object-fit: cover;
+    background-color: #EEEEEE;
+    color:#000000;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(/img/intro-triangle-mobile.svg);
+        bottom: -1px;
+        left: 0;
+        width: 320px;
+        height: 57px;
+    }
+}
+
+.welcome-message__title-image {
+  margin-top: 52px;
+  margin-bottom: 67px;
+}
+
+@media (min-width: @tablet-width) {
+    .main-welcome {
+        background-image: url(/img/back-tablet.jpg);
+    }
+
+    .welcome-message {
+        background-image: url(/img/back-tablet.jpg);
+        &::after {
+            background-image: url(/img/intro-triangle-tablet.svg);
+            width: 1200px;
+            height: 57px;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .main-welcome {
+        background-image: url(/img/back-desktop.jpg);
+        max-width: 100%;
+        object-fit: cover;
+        &::after {
+          background-image: url(/img/intro-triangle-desktop.svg);
+          width: 1200px;
+          height: 57px;
+      }
+    }
+
+    .welcome-message {
+        background-image: url(/img/back-desktop.jpg);
+        &::after {
+            background-image: url(/img/intro-triangle-desktop.svg);
+            width: 1200px;
+            height: 57px;
+        }
+    }
+
+    .welcome-message__title-image {
+        margin-top: 101px;
+        margin-bottom: 120px;
+      }
 }
