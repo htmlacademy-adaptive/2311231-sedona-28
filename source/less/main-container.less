@@ -1,0 +1,115 @@
+.main-container {
+    text-align: center;
+}
+.main-welcome {
+    background-image: url(/img/back-mobile.jpg);
+    background-repeat: no-repeat;
+    background-color: #EEEEEE;
+    color:#000000;
+    max-width: 100%;
+    object-fit: cover;
+    position: relative;
+    background-position: center;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(/img/intro-triangle-mobile.svg);
+        bottom: -1px;
+        translate: -50%;
+        left: 50%;
+        width: 320px;
+        height: 57px;
+        background-position: center;
+    }
+}
+
+.main-welcome__title-image {
+    margin-top: 90px;
+    margin-bottom: 85px;
+}
+
+.welcome-message {
+    background-image: url(/img/back-mobile.jpg);
+    background-color: #EEEEEE;
+    color:#000000;
+    position: relative;
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(/img/intro-triangle-mobile.svg);
+        bottom: -1px;
+        translate: -50%;
+        left: 50%;
+        width: 320px;
+        height: 57px;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.welcome-message__title-image {
+    margin-top: 52px;
+    margin-bottom: 67px;
+}
+
+@media (min-resolution: 2dppx) {
+  .main-welcome {
+    background-image: url(/img/back-mobile@2x.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+    .main-welcome {
+        background-image: url(/img/back-tablet.jpg);
+    }
+
+    .welcome-message {
+        background-image: url(/img/back-tablet.jpg);
+        &::after {
+            background-image: url(/img/intro-triangle-tablet.svg);
+            width: 1200px;
+            height: 57px;
+        }
+    }
+    .main-welcome__title-image {
+        margin-top: 77px;
+        margin-bottom: 91px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .main-welcome {
+        background-image: url(/img/back-desktop.jpg);
+        max-width: 100%;
+        object-fit: cover;
+        &::after {
+          background-image: url(/img/intro-triangle-desktop.svg);
+          width: 1200px;
+          height: 57px;
+      }
+    }
+
+    .welcome-message {
+        background-image: url(/img/back-desktop.jpg);
+        &::after {
+            background-image: url(/img/intro-triangle-desktop.svg);
+            width: 1200px;
+            height: 57px;
+        }
+    }
+
+    .welcome-message__title-image {
+        margin-top: 101px;
+        margin-bottom: 120px;
+      }
+    .main-welcome__title-image {
+        margin-top: 78px;
+        margin-bottom: 90px;
+    }
+}
