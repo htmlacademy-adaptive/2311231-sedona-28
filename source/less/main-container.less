@@ -6,26 +6,26 @@
     background-repeat: no-repeat;
     background-color: #EEEEEE;
     color:#000000;
-    max-width: 100%;
     object-fit: cover;
     position: relative;
     background-position: center;
     &::after {
         content: "";
         position: absolute;
-        background-image: url(/img/intro-triangle-mobile.svg);
-        bottom: -1px;
+        background-image: url(/img/intro-triangle.svg);
+        bottom: 0;
         translate: -50%;
         left: 50%;
-        width: 320px;
+        width: 100%;
         height: 57px;
         background-position: center;
     }
-}
 
-.main-welcome__title-image {
-    margin-top: 90px;
-    margin-bottom: 85px;
+    @media (min-resolution: 2dppx) {
+      background-image: url(/img/back-mobile@2x.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
 }
 
 .welcome-message {
@@ -34,21 +34,26 @@
     color:#000000;
     position: relative;
     background-repeat: no-repeat;
-    
-    background-position: center;
+    object-fit: cover;
+    background-position: bottom;
     &::after {
         content: "";
         position: absolute;
-        background-image: url(/img/intro-triangle-mobile.svg);
+        background-image: url(/img/intro-triangle.svg);
         bottom: -1px;
         translate: -50%;
         left: 50%;
         width: 320px;
         height: 57px;
-        
         background-repeat: no-repeat;
         background-position: center;
     }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(/img/back-mobile@2x.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
 }
 
 .welcome-message__title-image {
@@ -56,31 +61,46 @@
     margin-bottom: 67px;
 }
 
-@media (min-resolution: 2dppx) {
-  .main-welcome {
-    background-image: url(/img/back-mobile@2x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
+
 
 @media (min-width: @tablet-width) {
     .main-welcome {
-        background-image: url(/img/back-tablet.jpg);
+        background-image: url(/img/back-desktop.jpg);
+        background-position: bottom;
+        &::after {
+            background-image: url(/img/intro-triangle.svg);
+            width: 100%;
+        }
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(/img/back-desktop@2x.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
     }
 
+
     .welcome-message {
-        background-image: url(/img/back-tablet.jpg);
+        background-image: url(/img/back-desktop.jpg);
+        background-position: bottom;
+        object-fit: cover;
         &::after {
-            background-image: url(/img/intro-triangle-tablet.svg);
+            background-image: url(/img/intro-triangle.svg);
             width: 1200px;
             height: 57px;
         }
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(/img/back-desktop@2x.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
     }
-    .main-welcome__title-image {
-        margin-top: 77px;
-        margin-bottom: 91px;
-    }
+
+    .welcome-message__title-image {
+      margin-top: 95px;
+      margin-bottom: 117.4px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -89,27 +109,36 @@
         max-width: 100%;
         object-fit: cover;
         &::after {
-          background-image: url(/img/intro-triangle-desktop.svg);
+          background-image: url(/img/intro-triangle.svg);
           width: 1200px;
           height: 57px;
       }
+
+      @media (min-resolution: 2dppx) {
+        background-image: url(/img/back-desktop@2x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     }
 
     .welcome-message {
         background-image: url(/img/back-desktop.jpg);
+        background-position: bottom;
         &::after {
-            background-image: url(/img/intro-triangle-desktop.svg);
+            background-image: url(/img/intro-triangle.svg);
             width: 1200px;
             height: 57px;
         }
+
+        @media (min-resolution: 2dppx) {
+          background-image: url(/img/back-desktop@2x.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
     }
 
     .welcome-message__title-image {
         margin-top: 101px;
-        margin-bottom: 120px;
+        margin-bottom: 120.2px;
       }
-    .main-welcome__title-image {
-        margin-top: 78px;
-        margin-bottom: 90px;
-    }
 }

@@ -5,16 +5,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
   display: flex;
 }
 
 .modal-container__info-message {
   position: relative;
   max-width: 320px;
-  margin: auto;
+  margin: 0;
   background: #FFFFFF;
-
+  width: 100%;
   padding: 20px;
 
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
@@ -58,13 +58,29 @@
   padding-top: 18px;
   padding-bottom: 14px;
   border: none;
+  margin: 0 auto;
 }
 
 .info-message__success {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 244px;
+  .modal__close-button {
+    width: 280px;
+  }
+}
+
+.info-message__failure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .modal__close-button {
+    width: 180px;
+  }
+}
+
+.info-message--toggle {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {

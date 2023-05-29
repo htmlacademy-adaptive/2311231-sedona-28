@@ -1,3 +1,35 @@
+.advantages__title {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.advantages__description {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.advantages__divider {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+    margin-bottom: 17px;
+}
+
 .advantages__header {
     padding: 32px 18px;
     margin: 0 auto;
@@ -32,6 +64,7 @@
 }
 
 .advantages__item__wrapper {
+    width: 320px;
   padding-top:37px;
   &:first-child {
     padding-top: 54px;
@@ -45,6 +78,17 @@
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.advantages__item--primary {
+    background: @prime-color;
+    .advantages__title, .advantages__description, .advantages__divider {
+        color: @inverse-text-color;
+    }
+}
+
+.advantages__item--secondary {
+    background: #EEEEEE;
 }
 
 .advantages__town-item__wrapper {
@@ -65,50 +109,13 @@
     display: flex;
     flex-direction: column;
     text-align: start;
+    .advantages__title {
+        color: #000000;
+    }
     .advantages__description {
       margin-bottom: 0;
+      color: #333333;
     }
-}
-
-.advantages__title {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
-    color: #000000;
-    margin: 0;
-    margin-bottom: 16px;
-}
-
-.advantages__description {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #333333;
-    margin: 0;
-    margin-bottom: 40px;
-}
-
-.advantages__divider {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #333333;
-    margin-bottom: 17px;
-}
-
-.advantages__item--primary {
-    background: @prime-color;
-    color: #FFFFFF;
-}
-
-.advantages__item--secondary {
-    background: #EEEEEE;
 }
 
 .advantages__town-item--house {
@@ -133,21 +140,33 @@
 }
 
 @media (min-width: @tablet-width) {
+    .advantages__wrapper {
+        width: 768px;
+        margin: 0 auto;
+    }
+
     .advantages__header {
         width: 520px;
+        .advantages__title {
+            width: auto;
+            margin-bottom: 30px;
+        }
     }
 
     .advantages__item__wrapper {
         width: 190px;
-        min-height: 174px;
+        height: 174px;
         padding: 41px 33px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &:first-child {
+            padding-top: 52px;
+            padding-bottom: 31px;
+        }
     }
 
-    .advantages__item {
-      &:first-child {
-        padding-top: 0;
-    }
-    }
     .advantages__item:nth-child(2) {
         .advantages__item__wrapper {
             order: 2;
@@ -159,20 +178,22 @@
         gap: 0;
         padding: 0;
     }
-    .advantages__title{
-        text-align: center;
-        margin: 0 22px;
+
+    .advantages__title {
+        margin: 0;
+        width: 150px;
     }
+
     .advantages__town-item {
         width: 256px;
     }
+
     .advantages__description {
-        text-align: center;
         margin: 0;
     }
 
     .advantages__divider {
-        margin-bottom:30px
+        margin: 0;
     }
 
     .advantages__town-item--house {
@@ -195,19 +216,25 @@
 
     .advantages__town-item__wrapper {
         width: 190px;
+        height: 114px;
         padding: 158px 33px 60px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .advantages__image {
         height: 256px;
     }
-
-    .advantages__title {
-        margin-bottom: 24px;
-    }
 }
 
 @media (min-width: @desktop-width) {
+    .advantages__wrapper {
+        width: 1200px;
+    }
+
     .advantages__header {
         width: 484px;
         padding-top: 59px;

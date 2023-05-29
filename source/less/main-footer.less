@@ -19,7 +19,6 @@
 }
 
 .tags__text {
-    font-family: 'PT Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 21px;
@@ -42,26 +41,114 @@
     width: 156px;
 }
 
-.social__link {
-    text-decoration: none;
+.social__item {
+  background-color: @prime-color;
+  &:hover {
+    background-color: #669EC0;
+  }
+
+  &:active {
+    background-color: #5496BD;
+  }
 }
 
-.social__item {
+.social__link {
+    text-decoration: none;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
-    background-color: @prime-color;
+}
+
+.social__link--vkontakte {
+  &::after {
+    content: "";
+    mask: url(/img/icon-vk.svg);
+    background-color: #FFFFFF;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.social__link--telegram {
+  &::after {
+    content: "";
+    mask: url(/img/icon-telegram.svg);
+    background-color: #FFFFFF;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.social__link--youtube {
+  &::after {
+    content: "";
+    mask: url(/img/icon-youtube.svg);
+    background-color: #FFFFFF;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.social__link--vkontakte, .social__link--telegram, .social__link--youtube {
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.copyright {
+  width: 129px;
+  height: 36px;
+  display: flex;
+  align-items: center;
 }
 
 .copyright__text {
-    font-family: 'PT Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    color: #000000;
     margin: 0;
+}
+
+.copyright__link {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+  &::after {
+    content: "";
+    mask: url(/img/htmlacademy.svg);
+    background: #000000;
+    mask-repeat: no-repeat;
+    position: absolute;
+    right: -40px;
+    top: -7px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.copyright__link {
+  &:hover {
+    color: @prime-color;
+    &::after {
+      background-color: @prime-color;
+    }
+  }
+
+  &:active {
+    color: #B3B3B3;
+    &::after {
+      background-color: #B3B3B3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {

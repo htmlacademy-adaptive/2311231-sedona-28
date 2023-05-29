@@ -12,7 +12,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
-    color: #000000;
+    color: @main-text-color;
 }
 
 .card__author {
@@ -23,7 +23,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    color: #333333;
+    color: @second-text-color;
 }
 
 .card__like {
@@ -32,7 +32,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
-    color: #000000;
+    color: @main-text-color;
     margin-left: 37px;
     position: relative;
     &::before {
@@ -71,6 +71,26 @@
 @media (min-width: @desktop-width) {
   .card {
     position: relative;
+        &::before {
+        content: "";
+        width: 400px;
+        min-height: 80px;
+        background-color: #000000;
+        opacity: 0.3;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &:first-child::before {
+        content: "";
+        width: 1200px;
+        min-height: 80px;
+        background-color: #000000;
+        opacity: 0.3;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
   }
 
   .card__wrapper {
@@ -78,17 +98,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000000;
-    opacity: 0.3;
-    max-height: 400px;
     position: absolute;
     left: 0;
     bottom: 0;
   }
 
-
   .card__title, .card__author, .card__like{
-    color: #FFFFFF;
+    color: @inverse-text-color;
   }
 
   .card__like {
