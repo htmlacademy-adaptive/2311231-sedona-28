@@ -5,13 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Путешествие по Седоне</title>
         <link rel="stylesheet" href="/css/style.css">
-        <link rel="icon" href="/32.ico">
+        <link rel="icon" href="/favicon32.ico">
+        <link rel="icon" href="/img/favicons/favicon152.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="/img/favicons/apple-icon-180.png">
+        <link rel="manifest" href="manifest.webmanifest">
     </head>
 
     <body class="page__body">
         <header class="main-header">
             <a class="main-header__logo logo" href="index.html">
-                <img class="logo__image" src="/img/logo.png" width="185" height="96" alt="Седона.">
+                <img class="logo__image" src="/img/logo.svg" width="185" height="96" alt="Седона.">
             </a>
             <nav class="main-header__nav main-nav">
                 <button class="main-nav__toggle toggle" type="button">
@@ -26,8 +29,8 @@
                             </a>
                         </li>
 
-                        <li class="site-list__item site-list__item--current">
-                            <a class="site-list__link" href="catalog.html">
+                        <li class="site-list__item">
+                            <a class="site-list__link site-list__link--current" href="catalog.html">
                                 Фото и видео
                             </a>
                         </li>
@@ -55,7 +58,7 @@
                 <picture>
                     <source media="(min-width: 1280px)" srcset="/img/sedona-text-tablet.svg">
                     <source media="(min-width: 768px)" srcset="/img/sedona-text-tablet.svg">
-                    <img class="welcome-message__title-image" src="/img/sedona-text.png" alt="Добро пожаловать в великолепную Седону!">
+                    <img class="welcome-message__title-image" src="/img/sedona-text-tablet.svg" width="229" height="39" alt="Добро пожаловать в великолепную Седону!">
                 </picture>
             </section>
             <section class="catalog">
@@ -68,11 +71,11 @@
                         <li class="catalog__item card">
                           <picture>
                             <source media="(min-width: 1280px)"
-                            srcset="/img/catalog/desktop/photo-1-desktop.jpg" width="1200" height="400">
+                            srcset="/img/catalog/desktop/photo-1-desktop.jpg 1x, /img/catalog/desktop/photo-1-desktop.jpg 2x" width="1200" height="400">
                             <source media="(min-width: 768px)"
-                            srcset="/img/catalog/tablet/photo-1-tablet.jpg" width="648" height="400">
+                            srcset="/img/catalog/tablet/photo-1-tablet.jpg 1x, /img/catalog/tablet/photo-1-tablet.jpg 2x" width="648" height="400">
                             <img class="card__image"
-                            src="/img/catalog/photo-1-mobile.jpg" width="280" height="280" alt="Народные просторы.">
+                            src="/img/catalog/photo-1-mobile.jpg 1x" srcset="/img/catalog/photo-1-mobile.jpg 2x" width="280" height="280" alt="Народные просторы.">
                           </picture>
                           <div class="card__wrapper">
                             <div class="card__wrapper--text">
@@ -148,55 +151,51 @@
                     <a class="preview__video">
                       <picture>
                         <source media="(min-width: 1280px)"
-                        srcset="/img/catalog/desktop/video-desktop.jpg" width="800" height="500" >
+                        srcset="/img/catalog/desktop/video-desktop.jpg 1x, /img/catalog/desktop/video-desktop.jpg 2x" width="800" height="500" >
                         <source media="(min-width: 768px)"
-                        srcset="/img/catalog/tablet/video-tablet.jpg" width="648" height="500" >
+                        srcset="/img/catalog/tablet/video-tablet.jpg 1x, /img/catalog/tablet/video-tablet.jpg 2x" width="648" height="500" >
                         <img class="preview__image"
-                        src="/img/catalog/video-mobile.jpg" width="280" height="177" alt="Видео.">
+                        src="/img/catalog/video-mobile.jpg" srcset="/img/catalog/video-mobile.jpg 2x" width="280" height="177" alt="Видео.">
                       </picture>
                     </a>
                 </div>
             </section>
-
-            <footer class="main-footer">
-                <div class="main-footer__wrapper">
-                    <ul class="main-footer__tags tags">
-                        <li class="tags__item">
-                            <p class="tags__text">#visitSEDONA</p>
-                        </li>
-                    </ul>
-                    <div class="main-footer__social social">
-                        <ul class="social__list">
-                            <li class="social__item">
-                                <a class="social__link social__link--vkontakte" href="#">
-                                    <span class="visually-hidden">Вконтакте</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" fill="none" viewBox="0 0 24 14"><path fill="#fff" fill-rule="evenodd" d="M23.45.948c.166-.546 0-.948-.795-.948H20.03c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.418-.191-.418-.738V.948c0-.656-.184-.948-.74-.948H9.151c-.417 0-.668.304-.668.593 0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984-.89 0-3.055-3.211-4.34-6.885C4.45.288 4.198 0 3.527 0H.9C.15 0 0 .347 0 .73c0 .682.89 4.07 4.145 8.551C6.315 12.341 9.37 14 12.153 14c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884.39 0 1.057.192 2.615 1.667C19.11 13.216 19.403 14 20.405 14h2.625c.75 0 1.126-.368.91-1.096-.238-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.809-1.858-.389-.491-.278-.71 0-1.147 0 0 3.2-4.426 3.533-5.929h.001Z" clip-rule="evenodd"/></svg>
-                                </a>
-                            </li>
-
-                            <li class="social__item">
-                                <a class="social__link social__link--telegram" href="#">
-                                    <span class="visually-hidden">Телеграм</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" fill="none" viewBox="0 0 22 18"><path fill="#fff" d="m21.44 1.622-3.17 14.944c-.239 1.055-.862 1.317-1.748.82l-4.828-3.557-2.33 2.24c-.258.259-.473.474-.97.474l.347-4.917 8.948-8.086c.39-.347-.084-.54-.604-.192L6.022 10.314 1.26 8.823C.224 8.5.205 7.787 1.476 7.29L20.103.113c.863-.323 1.617.192 1.336 1.51Z"/></svg>
-                                </a>
-                            </li>
-
-                            <li class="social__item">
-                                <a class="social__link social__link--youtube" href="#">
-                                    <span class="visually-hidden">Ютуб</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none" viewBox="0 0 20 14"><path fill="#fff" d="M17.181 0H2.813C1.306 0 0 1.3 0 2.8v8.3C0 12.7 1.306 14 2.813 14h14.368c1.608 0 2.814-1.3 2.814-2.8V2.8c.1-1.5-1.206-2.8-2.814-2.8ZM7.033 10.4V3.6L13.866 7l-6.833 3.4Z"/></svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="main-footer__copyright copyright">
-                        <p class="copyright__text">Разработано</p>
-                        <a class="copyright__link" href="https://htmlacademy.ru">
-                            <span class="visually-hidden">.html academy</span>
-                        </a>
-                    </div>
-                </div>
-            </footer>
         </main>
+        <footer class="main-footer">
+          <div class="main-footer__wrapper">
+              <ul class="main-footer__tags tags">
+                  <li class="tags__item">
+                      <p class="tags__text">#visitSEDONA</p>
+                  </li>
+              </ul>
+              <div class="main-footer__social social">
+                  <ul class="social__list">
+                      <li class="social__item">
+                          <a class="social__link social__link--vkontakte" href="#">
+                              <span class="visually-hidden">Вконтакте</span>
+                          </a>
+                      </li>
+
+                      <li class="social__item">
+                          <a class="social__link social__link--telegram" href="#">
+                              <span class="visually-hidden">Телеграм</span>
+                          </a>
+                      </li>
+
+                      <li class="social__item">
+                          <a class="social__link social__link--youtube" href="#">
+                              <span class="visually-hidden">Ютуб</span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="main-footer__copyright copyright">
+                  <a class="copyright__link" href="https://htmlacademy.ru">
+                    <p class="copyright__text">Разработано</p>
+                    <span class="visually-hidden">.html academy</span>
+                  </a>
+              </div>
+          </div>
+      </footer>
     </body>
 </html>
