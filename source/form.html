@@ -177,24 +177,30 @@
         </div>
     </footer>
         <!-- Модальное-->
-        <div class="modal-container modal-container--close">
-          <div class="modal-container__info-message">
-            <section class="info-message__failure info-message--toggle">
-              <h2 class="info-message__title">Что-то пошло не так!</h2>
-              <p class="info-message__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-              <button class="modal__close-button" type="button">
+        <div class="modal-failure-container  modal-failure-close">
+            <div class="modal-failure">
+                <div class="modal-failure__text-wrapper">
+                    <h2 class="modal-failure__title">Что-то пошло не так!</h2>
+                    <p class="modal-failure__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+                </div>
+              <button class="modal-failure__button button" type="button">
                 Ок
               </button>
-            </section>
+            </div>
+        </div>
 
-            <section class="info-message__success">
-              <h2 class="info-message__title">Ваш отзыв отправлен!</h2>
-              <p class="info-message__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-              <button class="modal__close-button" type="button">
-                Закрыть окно
-              </button>
-            </section>
-          </div>
+        <div class="modal-success-container modal-success-close">
+            <div class="modal-success">
+                <div class="modal-success__text-wrapper">
+                    <h2 class="modal-success__title">Ваш отзыв отправлен!</h2>
+                    <p class="modal-success__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+                </div>
+                <div class="modal-success__button-wrapper">
+                    <button class="modal-success__button button" type="button">
+                        Закрыть окно
+                    </button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
